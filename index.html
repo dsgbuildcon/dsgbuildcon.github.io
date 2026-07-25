@@ -5,92 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DSG BUILDCON PVT LTD | Infrastructure & Technology Solutions</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        dsgBlue: '#0d6efd',
-                        dsgDarkBlue: '#0b5ed7',
-                        dsgNavy: '#0a192f',
+                        dsgBlue: '#0c6ce9',
+                        dsgHover: '#0a58c2',
+                        dsgDarkNavy: '#091527',
+                        dsgCardBg: '#0f223d',
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-dsgBlue selection:text-white">
 
     <!-- Header / Navigation -->
-    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200 shadow-sm">
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Logo Container -->
-            <a href="#" class="flex items-center space-x-3">
-                <svg class="w-10 h-10 text-dsgBlue" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="20" y="20" width="460" height="460" rx="90" stroke="currentColor" stroke-width="36" fill="none"/>
-                    <path d="M100 70 H230 V380 C230 420 200 440 160 440 H100 V70 Z" fill="currentColor"/>
-                    <path d="M248 70 H400 V120 H308 V240 C308 240 390 240 390 320 V380 C390 420 360 440 308 440 H248 V380 H308 C330 380 338 365 338 340 V300 C338 275 330 260 308 260 H248 V70 Z" fill="currentColor"/>
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center space-x-3.5 group">
+                <!-- SVG Logo matching DSG uploaded artwork -->
+                <svg class="w-11 h-11 text-dsgBlue shrink-0 transition-transform group-hover:scale-105" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Outer Rounded Box -->
+                    <rect x="25" y="25" width="450" height="450" rx="90" ry="90" stroke="currentColor" stroke-width="34" fill="none"/>
+                    
+                    <!-- D Element -->
+                    <path d="M100 70 H235 V370 C235 410 200 430 155 430 H100 V70 Z" fill="currentColor"/>
+                    <path d="M155 120 H180 V320 C180 345 165 375 155 375 V120 Z" fill="#ffffff"/>
+
+                    <!-- S / G Element -->
+                    <path d="M245 70 H400 V120 H308 V230 C308 230 390 230 390 310 V380 C390 415 365 430 315 430 H245 V375 H308 C332 375 338 360 338 340 V295 C338 275 332 260 308 260 H245 V70 Z" fill="currentColor"/>
+                    <!-- Inner notch for G -->
+                    <path d="M338 235 H390 V380 C390 415 365 430 315 430 H290 V375 H315 C332 375 338 360 338 340 V235 Z" fill="currentColor"/>
                 </svg>
+                
                 <div class="flex flex-col">
-                    <span class="font-extrabold text-xl tracking-tight text-slate-900 leading-none">DSG BUILDCON</span>
-                    <span class="text-xs font-semibold tracking-widest text-dsgBlue uppercase">Private Limited</span>
+                    <span class="font-black text-xl tracking-tight text-slate-900 leading-none">DSG BUILDCON</span>
+                    <span class="text-[10px] font-bold tracking-widest text-dsgBlue uppercase mt-1">Private Limited</span>
                 </div>
             </a>
 
             <!-- Nav Links -->
             <nav class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
-                <a href="#about" class="hover:text-dsgBlue transition">About Us</a>
-                <a href="#services" class="hover:text-dsgBlue transition">Core Verticals</a>
-                <a href="#corporate" class="hover:text-dsgBlue transition">Corporate Info</a>
-                <a href="#contact" class="hover:text-dsgBlue transition">Contact</a>
+                <a href="#about" class="hover:text-dsgBlue transition-colors">About Us</a>
+                <a href="#verticals" class="hover:text-dsgBlue transition-colors">Core Verticals</a>
+                <a href="#governance" class="hover:text-dsgBlue transition-colors">Governance</a>
+                <a href="#offices" class="hover:text-dsgBlue transition-colors">Locations</a>
+                <a href="#contact" class="hover:text-dsgBlue transition-colors">Contact</a>
             </nav>
 
-            <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-white bg-dsgBlue rounded-lg hover:bg-dsgDarkBlue shadow-md transition">
+            <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-white bg-dsgBlue rounded-lg hover:bg-dsgHover shadow-md transition-all hover:shadow-lg">
                 Get in Touch
             </a>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-b from-slate-900 via-dsgNavy to-slate-900 text-white py-24 lg:py-32 overflow-hidden">
-        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#0d6efd_1px,transparent_1px)] [background-size:16px_16px]"></div>
+    <section class="relative bg-gradient-to-b from-slate-950 via-dsgDarkNavy to-slate-900 text-white py-24 lg:py-32 overflow-hidden">
+        <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#0c6ce9_1px,transparent_1px)] [background-size:20px_20px]"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-7 space-y-6">
-                    <div class="inline-flex items-center space-x-2 bg-dsgBlue/20 border border-dsgBlue/30 px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide text-blue-300">
-                        <span class="w-2 h-2 rounded-full bg-dsgBlue animate-pulse"></span>
-                        <span>Government Tenders • Infrastructure • Technology</span>
+                
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 bg-dsgBlue/15 border border-dsgBlue/30 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide text-blue-300">
+                        <span class="w-2 h-2 rounded-full bg-dsgBlue animate-ping"></span>
+                        <span>Infrastructure • Government Tenders • IT Solutions</span>
                     </div>
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
-                        Engineering Infrastructure. <br>
-                        <span class="text-dsgBlue">Powering Digital Innovation.</span>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
+                        Building Strong Foundations. <br class="hidden sm:inline">
+                        <span class="text-dsgBlue">Driving Digital Innovation.</span>
                     </h1>
-                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl leading-relaxed">
-                        DSG BUILDCON PVT LTD is a multi-disciplinary enterprise driving large-scale civil construction, government contracts, and next-generation IT software services across India.
+
+                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl leading-relaxed mx-auto lg:mx-0">
+                        DSG BUILDCON PVT LTD is an integrated enterprise committed to executing high-impact civil infrastructure, state government tenders, and delivering modern enterprise software services.
                     </p>
-                    <div class="flex flex-wrap gap-4 pt-4">
-                        <a href="#services" class="px-6 py-3 bg-dsgBlue hover:bg-dsgDarkBlue text-white font-semibold rounded-lg shadow-lg transition">
+
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#verticals" class="px-7 py-3.5 bg-dsgBlue hover:bg-dsgHover text-white font-semibold rounded-lg shadow-lg shadow-dsgBlue/25 transition-all">
                             Explore Capabilities
                         </a>
-                        <a href="#corporate" class="px-6 py-3 bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold rounded-lg transition">
-                            Company Details
+                        <a href="#governance" class="px-7 py-3.5 bg-white/10 hover:bg-white/15 text-white border border-white/20 font-semibold rounded-lg transition-all">
+                            Corporate Overview
                         </a>
                     </div>
                 </div>
 
-                <!-- Visual Badge Representation -->
+                <!-- Exact SVG Logo Feature Card -->
                 <div class="lg:col-span-5 flex justify-center">
-                    <div class="p-8 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-md shadow-2xl flex flex-col items-center text-center">
-                        <svg class="w-48 h-48 text-dsgBlue mb-4 drop-shadow-lg" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="20" y="20" width="460" height="460" rx="90" stroke="currentColor" stroke-width="36" fill="none"/>
-                            <path d="M100 70 H230 V380 C230 420 200 440 160 440 H100 V70 Z" fill="currentColor"/>
-                            <path d="M248 70 H400 V120 H308 V240 C308 240 390 240 390 320 V380 C390 420 360 440 308 440 H248 V380 H308 C330 380 338 365 338 340 V300 C338 275 330 260 308 260 H248 V70 Z" fill="currentColor"/>
+                    <div class="p-10 bg-gradient-to-br from-white/10 to-white/5 border border-white/15 rounded-3xl backdrop-blur-xl shadow-2xl flex flex-col items-center text-center max-w-sm w-full">
+                        
+                        <svg class="w-44 h-44 text-dsgBlue mb-6 drop-shadow-xl" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="25" y="25" width="450" height="450" rx="90" ry="90" stroke="currentColor" stroke-width="34" fill="none"/>
+                            <path d="M100 70 H235 V370 C235 410 200 430 155 430 H100 V70 Z" fill="currentColor"/>
+                            <path d="M155 120 H180 V320 C180 345 165 375 155 375 V120 Z" fill="#0d1b2e"/>
+                            <path d="M245 70 H400 V120 H308 V230 C308 230 390 230 390 310 V380 C390 415 365 430 315 430 H245 V375 H308 C332 375 338 360 338 340 V295 C338 275 332 260 308 260 H245 V70 Z" fill="currentColor"/>
+                            <path d="M338 235 H390 V380 C390 415 365 430 315 430 H290 V375 H315 C332 375 338 360 338 340 V235 Z" fill="currentColor"/>
                         </svg>
-                        <h3 class="text-xl font-bold text-white">DSG BUILDCON PVT LTD</h3>
-                        <p class="text-xs text-slate-400 mt-1">Incorporated under Companies Act, Govt. of India</p>
+
+                        <h3 class="text-xl font-extrabold text-white tracking-wide">DSG BUILDCON PVT LTD</h3>
+                        <p class="text-xs text-blue-200/80 mt-1 font-medium">Civil Engineering & IT Services</p>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -98,93 +119,96 @@
     <!-- About Us Section -->
     <section id="about" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
+            <div class="max-w-3xl mx-auto text-center space-y-3 mb-16">
                 <h2 class="text-xs font-bold text-dsgBlue uppercase tracking-widest">About Our Organization</h2>
-                <p class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Building Strong Foundations for Growth</p>
+                <p class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Building with Integrity & Excellence</p>
                 <div class="w-16 h-1 bg-dsgBlue mx-auto rounded-full"></div>
             </div>
 
             <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-5 text-slate-600 text-lg leading-relaxed">
+                <div class="space-y-5 text-slate-600 text-base sm:text-lg leading-relaxed">
                     <p>
-                        <strong class="text-slate-900">DSG BUILDCON PRIVATE LIMITED</strong> is a progressive entity committed to excellence in civil infrastructure and state-level government development contracts. 
+                        <strong class="text-slate-900">DSG BUILDCON PRIVATE LIMITED</strong> is a multi-disciplinary company established to undertake quality-driven civil construction projects, public infrastructure works, and government tender executions.
                     </p>
                     <p>
-                        Headquartered with its registered office in <strong class="text-slate-900">Godda</strong> and operational presence in <strong class="text-slate-900">Ranchi</strong>, the company bridges physical construction expertise with digital transformation initiatives.
+                        With its registered corporate seat in <strong class="text-slate-900">Godda</strong> and operational branch office in <strong class="text-slate-900">Ranchi</strong>, the organization combines physical engineering strength with digital adaptability.
                     </p>
                     <p>
-                        Beyond physical infrastructure, DSG Buildcon pioneers specialized software solutions and IT service verticals to modernize workflow processes and tech integration for modern enterprise needs.
+                        To complement traditional construction expertise, DSG Buildcon actively operates specialized IT & software initiatives—delivering enterprise software solutions, digital tools, and technological infrastructure services.
                     </p>
                 </div>
 
-                <div class="grid grid-cols-2 gap-6">
-                    <div class="p-6 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
-                        <i class="fa-solid fa-building-columns text-3xl text-dsgBlue"></i>
-                        <h4 class="font-bold text-slate-900 text-xl">Govt Tenders</h4>
-                        <p class="text-sm text-slate-500">Execution of public works and civil framework contracts.</p>
+                <div class="grid grid-cols-2 gap-5">
+                    <div class="p-6 bg-slate-50 border border-slate-200/80 rounded-2xl hover:border-dsgBlue/50 transition-colors">
+                        <i class="fa-solid fa-landmark text-3xl text-dsgBlue mb-3"></i>
+                        <h4 class="font-bold text-slate-900 text-lg">Govt Tenders</h4>
+                        <p class="text-xs text-slate-500 mt-1">Executing public works and state infrastructure contracts.</p>
                     </div>
-                    <div class="p-6 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
-                        <i class="fa-solid fa-helmet-safety text-3xl text-dsgBlue"></i>
-                        <h4 class="font-bold text-slate-900 text-xl">Construction</h4>
-                        <p class="text-sm text-slate-500">Quality-driven structural and development projects.</p>
+
+                    <div class="p-6 bg-slate-50 border border-slate-200/80 rounded-2xl hover:border-dsgBlue/50 transition-colors">
+                        <i class="fa-solid fa-helmet-safety text-3xl text-dsgBlue mb-3"></i>
+                        <h4 class="font-bold text-slate-900 text-lg">Construction</h4>
+                        <p class="text-xs text-slate-500 mt-1">Commercial, civil, and structural engineering projects.</p>
                     </div>
-                    <div class="p-6 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
-                        <i class="fa-solid fa-laptop-code text-3xl text-dsgBlue"></i>
-                        <h4 class="font-bold text-slate-900 text-xl">IT Initiatives</h4>
-                        <p class="text-sm text-slate-500">Enterprise software tools and IT consulting services.</p>
+
+                    <div class="p-6 bg-slate-50 border border-slate-200/80 rounded-2xl hover:border-dsgBlue/50 transition-colors">
+                        <i class="fa-solid fa-laptop-code text-3xl text-dsgBlue mb-3"></i>
+                        <h4 class="font-bold text-slate-900 text-lg">IT Solutions</h4>
+                        <p class="text-xs text-slate-500 mt-1">Software development, system integration & digital services.</p>
                     </div>
-                    <div class="p-6 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
-                        <i class="fa-solid fa-shield-halved text-3xl text-dsgBlue"></i>
-                        <h4 class="font-bold text-slate-900 text-xl">Compliant</h4>
-                        <p class="text-sm text-slate-500">Registered with RoC-Ranchi, Govt. of India.</p>
+
+                    <div class="p-6 bg-slate-50 border border-slate-200/80 rounded-2xl hover:border-dsgBlue/50 transition-colors">
+                        <i class="fa-solid fa-map-location-dot text-3xl text-dsgBlue mb-3"></i>
+                        <h4 class="font-bold text-slate-900 text-lg">Dual Presence</h4>
+                        <p class="text-xs text-slate-500 mt-1">Active operations in Ranchi & registered office in Godda.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services / Core Verticals -->
-    <section id="services" class="py-20 bg-slate-100 border-y border-slate-200">
+    <!-- Core Business Verticals -->
+    <section id="verticals" class="py-20 bg-slate-100/80 border-y border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
-                <h2 class="text-xs font-bold text-dsgBlue uppercase tracking-widest">Our Verticals</h2>
+            <div class="max-w-3xl mx-auto text-center space-y-3 mb-16">
+                <h2 class="text-xs font-bold text-dsgBlue uppercase tracking-widest">Capabilities</h2>
                 <p class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Core Business Operations</p>
                 <div class="w-16 h-1 bg-dsgBlue mx-auto rounded-full"></div>
             </div>
 
             <div class="grid lg:grid-cols-2 gap-8">
-                <!-- Vertical 1 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between">
+                <!-- Vertical 1: Infrastructure & Tenders -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/80 hover:shadow-md transition-shadow flex flex-col justify-between">
                     <div>
-                        <div class="w-12 h-12 bg-blue-50 text-dsgBlue rounded-lg flex items-center justify-center text-2xl mb-6">
-                            <i class="fa-solid fa-hard-hat"></i>
+                        <div class="w-14 h-14 bg-blue-50 text-dsgBlue rounded-xl flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-building-user"></i>
                         </div>
-                        <h3 class="text-2xl font-bold text-slate-900 mb-4">Civil Construction & Govt. Tenders</h3>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">Civil Construction & Government Tenders</h3>
                         <p class="text-slate-600 leading-relaxed mb-6">
-                            Specializing in statutory infrastructure, commercial build-outs, public civil projects, and procurement tenders across state and regional bodies.
+                            End-to-end management and execution of civil development projects, government tenders, public works, and specialized structural engineering works.
                         </p>
                         <ul class="space-y-3 text-sm text-slate-700 font-medium">
-                            <li class="flex items-center"><i class="fa-solid fa-check text-dsgBlue mr-3"></i> Public Works & Civil Contracting</li>
-                            <li class="flex items-center"><i class="fa-solid fa-check text-dsgBlue mr-3"></i> Government Infrastructure Tenders</li>
-                            <li class="flex items-center"><i class="fa-solid fa-check text-dsgBlue mr-3"></i> Site Engineering & Project Execution</li>
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-dsgBlue mr-3 text-base"></i> Public Sector Infrastructure & Road Development</li>
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-dsgBlue mr-3 text-base"></i> Government Bidding & Tender Management</li>
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-dsgBlue mr-3 text-base"></i> Quality Engineering & On-site Project Management</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- Vertical 2 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between">
+                <!-- Vertical 2: IT & Software Services -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/80 hover:shadow-md transition-shadow flex flex-col justify-between">
                     <div>
-                        <div class="w-12 h-12 bg-blue-50 text-dsgBlue rounded-lg flex items-center justify-center text-2xl mb-6">
-                            <i class="fa-solid fa-code"></i>
+                        <div class="w-14 h-14 bg-blue-50 text-dsgBlue rounded-xl flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-microchip"></i>
                         </div>
-                        <h3 class="text-2xl font-bold text-slate-900 mb-4">IT Services & Software Solutions</h3>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">IT Services & Software Solutions</h3>
                         <p class="text-slate-600 leading-relaxed mb-6">
-                            Delivering technological solutions, enterprise application development, and software tools designed to streamline workflow and business management.
+                            Forward-thinking technology initiatives focusing on software development, digital workflow automation, enterprise applications, and IT consulting.
                         </p>
                         <ul class="space-y-3 text-sm text-slate-700 font-medium">
-                            <li class="flex items-center"><i class="fa-solid fa-check text-dsgBlue mr-3"></i> Custom Enterprise Software Development</li>
-                            <li class="flex items-center"><i class="fa-solid fa-check text-dsgBlue mr-3"></i> Digital Workflow Transformation</li>
-                            <li class="flex items-center"><i class="fa-solid fa-check text-dsgBlue mr-3"></i> Technology Advisory Services</li>
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-dsgBlue mr-3 text-base"></i> Enterprise Software & Cloud Application Development</li>
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-dsgBlue mr-3 text-base"></i> Process Automation & System Integration</li>
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-dsgBlue mr-3 text-base"></i> Technical Advisory & Digital Transformation Services</li>
                         </ul>
                     </div>
                 </div>
@@ -192,85 +216,105 @@
         </div>
     </section>
 
-    <!-- Corporate Information Section -->
-    <section id="corporate" class="py-20 bg-white">
+    <!-- Board of Directors & Governance -->
+    <section id="governance" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
-                <h2 class="text-xs font-bold text-dsgBlue uppercase tracking-widest">Public Information</h2>
-                <p class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Statutory & Governance Details</p>
+            <div class="max-w-3xl mx-auto text-center space-y-3 mb-16">
+                <h2 class="text-xs font-bold text-dsgBlue uppercase tracking-widest">Leadership & Structure</h2>
+                <p class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Board of Directors & Governance</p>
                 <div class="w-16 h-1 bg-dsgBlue mx-auto rounded-full"></div>
             </div>
 
-            <div class="bg-slate-900 text-white rounded-2xl p-8 lg:p-12 shadow-xl grid md:grid-cols-2 gap-8">
-                <!-- Statutory Info -->
-                <div class="space-y-6">
-                    <h3 class="text-xl font-bold text-dsgBlue border-b border-slate-800 pb-3">Company Registration</h3>
-                    <dl class="space-y-4 text-sm">
-                        <div class="flex justify-between py-1 border-b border-slate-800">
-                            <dt class="text-slate-400">Legal Name</dt>
-                            <dd class="font-semibold text-white">DSG BUILDCON PRIVATE LIMITED</dd>
+            <!-- Corporate Summary Card -->
+            <div class="bg-dsgDarkNavy text-white rounded-3xl p-8 lg:p-12 shadow-xl grid lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Entity Statutory Profile -->
+                <div class="lg:col-span-6 space-y-6">
+                    <h3 class="text-xl font-bold text-dsgBlue border-b border-slate-800 pb-3 flex items-center">
+                        <i class="fa-solid fa-id-card mr-3"></i> Corporate Entity Profile
+                    </h3>
+                    <dl class="space-y-3.5 text-sm">
+                        <div class="flex justify-between py-1.5 border-b border-slate-800/80">
+                            <dt class="text-slate-400">Company Name</dt>
+                            <dd class="font-bold text-white">DSG BUILDCON PRIVATE LIMITED</dd>
                         </div>
-                        <div class="flex justify-between py-1 border-b border-slate-800">
-                            <dt class="text-slate-400">CIN Number</dt>
-                            <dd class="font-mono font-semibold text-blue-300">U43299JH2025PTC024140</dd>
+                        <div class="flex justify-between py-1.5 border-b border-slate-800/80">
+                            <dt class="text-slate-400">Corporate Identification No. (CIN)</dt>
+                            <dd class="font-mono font-bold text-blue-300">U43299JH2025PTC024140</dd>
                         </div>
-                        <div class="flex justify-between py-1 border-b border-slate-800">
-                            <dt class="text-slate-400">Registrar of Companies</dt>
-                            <dd class="font-semibold text-white">RoC-Ranchi</dd>
+                        <div class="flex justify-between py-1.5 border-b border-slate-800/80">
+                            <dt class="text-slate-400">Registrar Office</dt>
+                            <dd class="font-semibold text-white">RoC - Ranchi</dd>
                         </div>
-                        <div class="flex justify-between py-1 border-b border-slate-800">
-                            <dt class="text-slate-400">Incorporation Date</dt>
+                        <div class="flex justify-between py-1.5 border-b border-slate-800/80">
+                            <dt class="text-slate-400">Date of Incorporation</dt>
                             <dd class="font-semibold text-white">26 February 2025</dd>
                         </div>
-                        <div class="flex justify-between py-1">
-                            <dt class="text-slate-400">Entity Category</dt>
+                        <div class="flex justify-between py-1.5">
+                            <dt class="text-slate-400">Company Category</dt>
                             <dd class="font-semibold text-white">Private Limited Company</dd>
                         </div>
                     </dl>
                 </div>
 
-                <!-- Key Leadership -->
-                <div class="space-y-6">
-                    <h3 class="text-xl font-bold text-dsgBlue border-b border-slate-800 pb-3">Board of Directors</h3>
-                    <div class="space-y-4">
-                        <div class="p-4 bg-slate-800/80 rounded-lg flex items-center space-x-4">
-                            <div class="w-10 h-10 rounded-full bg-dsgBlue/20 text-dsgBlue flex items-center justify-center font-bold">
-                                D
+                <!-- Updated Board of Directors Cards -->
+                <div class="lg:col-span-6 space-y-6">
+                    <h3 class="text-xl font-bold text-dsgBlue border-b border-slate-800 pb-3 flex items-center">
+                        <i class="fa-solid fa-users-gear mr-3"></i> Executive Board
+                    </h3>
+                    
+                    <p class="text-xs text-slate-400">
+                        Our leadership team guides strategic execution across construction, public procurement, and software verticals.
+                    </p>
+
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <!-- Director Card 1 -->
+                        <div class="p-5 bg-slate-800/90 border border-slate-700/80 rounded-2xl flex flex-col justify-between">
+                            <div class="flex items-center space-x-3 mb-3">
+                                <div class="w-10 h-10 rounded-xl bg-dsgBlue text-white flex items-center justify-center font-bold text-lg shadow-md">
+                                    <i class="fa-solid fa-user-tie"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-base">Board Member</h4>
+                                    <p class="text-xs text-dsgBlue font-semibold">Director</p>
+                                </div>
                             </div>
-                            <div>
-                                <h4 class="font-bold text-white text-base">Dibyanshu</h4>
-                                <p class="text-xs text-slate-400">Director</p>
-                            </div>
+                            <span class="text-[11px] text-slate-400">Executive Strategic Planning</span>
                         </div>
 
-                        <div class="p-4 bg-slate-800/80 rounded-lg flex items-center space-x-4">
-                            <div class="w-10 h-10 rounded-full bg-dsgBlue/20 text-dsgBlue flex items-center justify-center font-bold">
-                                C
+                        <!-- Director Card 2 -->
+                        <div class="p-5 bg-slate-800/90 border border-slate-700/80 rounded-2xl flex flex-col justify-between">
+                            <div class="flex items-center space-x-3 mb-3">
+                                <div class="w-10 h-10 rounded-xl bg-dsgBlue text-white flex items-center justify-center font-bold text-lg shadow-md">
+                                    <i class="fa-solid fa-user-gear"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-base">Board Member</h4>
+                                    <p class="text-xs text-dsgBlue font-semibold">Director</p>
+                                </div>
                             </div>
-                            <div>
-                                <h4 class="font-bold text-white text-base">Chandan Kumar Verma</h4>
-                                <p class="text-xs text-slate-400">Director</p>
-                            </div>
+                            <span class="text-[11px] text-slate-400">Operations & Governance</span>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Address & Contact Section -->
-    <section id="contact" class="py-20 bg-slate-50 border-t border-slate-200">
+    <!-- Offices & Contact Section -->
+    <section id="offices" class="py-20 bg-slate-50 border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
-                <h2 class="text-xs font-bold text-dsgBlue uppercase tracking-widest">Offices</h2>
-                <p class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Our Locations & Reach</p>
+            <div class="max-w-3xl mx-auto text-center space-y-3 mb-16">
+                <h2 class="text-xs font-bold text-dsgBlue uppercase tracking-widest">Our Presence</h2>
+                <p class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Registered & Operational Offices</p>
                 <div class="w-16 h-1 bg-dsgBlue mx-auto rounded-full"></div>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
                 <!-- Registered Office -->
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200">
-                    <div class="inline-block p-3 bg-blue-50 text-dsgBlue rounded-lg mb-4">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/80 hover:border-dsgBlue transition-colors">
+                    <div class="inline-flex p-3 bg-blue-50 text-dsgBlue rounded-xl mb-4">
                         <i class="fa-solid fa-location-dot text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-slate-900 mb-2">Registered Office</h3>
@@ -280,9 +324,9 @@
                     </p>
                 </div>
 
-                <!-- Operational Branch -->
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200">
-                    <div class="inline-block p-3 bg-blue-50 text-dsgBlue rounded-lg mb-4">
+                <!-- Branch Office -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/80 hover:border-dsgBlue transition-colors">
+                    <div class="inline-flex p-3 bg-blue-50 text-dsgBlue rounded-xl mb-4">
                         <i class="fa-solid fa-building text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-slate-900 mb-2">Branch Office</h3>
@@ -292,18 +336,46 @@
                     </p>
                 </div>
             </div>
+
+            <!-- Simple Contact / Inquiry Form -->
+            <div id="contact" class="max-w-2xl mx-auto bg-white p-8 sm:p-10 rounded-2xl shadow-sm border border-slate-200">
+                <h3 class="text-2xl font-bold text-slate-900 text-center mb-6">Send Us an Inquiry</h3>
+                <form onsubmit="event.preventDefault(); alert('Thank you for contacting DSG BUILDCON PVT LTD.');" class="space-y-4">
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Your Name</label>
+                            <input type="text" required placeholder="John Doe" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dsgBlue focus:border-dsgBlue text-sm outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Email Address</label>
+                            <input type="email" required placeholder="john@example.com" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dsgBlue focus:border-dsgBlue text-sm outline-none">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Subject</label>
+                        <input type="text" required placeholder="Tender Inquiry / IT Services" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dsgBlue focus:border-dsgBlue text-sm outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Message</label>
+                        <textarea rows="4" required placeholder="Write your query here..." class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-dsgBlue focus:border-dsgBlue text-sm outline-none"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3 bg-dsgBlue hover:bg-dsgHover text-white font-bold rounded-lg shadow transition">
+                        Submit Inquiry
+                    </button>
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+    <footer class="bg-slate-950 text-slate-400 py-10 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between text-xs space-y-4 md:space-y-0">
             <div class="flex items-center space-x-3">
-                <span class="font-bold text-white text-sm">DSG BUILDCON PVT LTD</span>
+                <span class="font-extrabold text-white text-sm">DSG BUILDCON PVT LTD</span>
                 <span>• CIN: U43299JH2025PTC024140</span>
             </div>
             <div>
-                © 2026 DSG BUILDCON PVT LTD. All public statutory information sourced from official MCA filings.
+                © DSG BUILDCON PVT LTD. All rights reserved.
             </div>
         </div>
     </footer>
